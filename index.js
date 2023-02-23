@@ -12,6 +12,7 @@ const password2El = document.getElementById("password2");
 
 //function will generate random passwords by checking user inputs
 function getRandomPass(size){
+   
     let password="";
     if(number.checked ==1 && symbol.checked ==1 )
     {
@@ -46,14 +47,25 @@ else if(number.checked == 1){
         }
         return password;
         }
+    
+   
 }
+
 
 // the function will call getRandomPass() to generate two random passwords 
 // of size provided by user in prompt
+//max size of password set to 20
 function generatePasswords(){
     let size = prompt("Please enter the length of the password.")
+    if(size<21)
+    {
     password1El.textContent = getRandomPass(size);
     password2El.textContent = getRandomPass(size);
+    }
+    else{
+         alert("Please choose a lesser password size.");
+         generatePasswords();
+        }
     }
 
 //function to copy text/password generated from div element to clipboard

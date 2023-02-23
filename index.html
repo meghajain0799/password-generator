@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta character="utf-8">
+    <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div id="generate"><h2 id="h21">Generate a</h2></div>
+            <div id="random"><h2 id="h22">random password</h2></div>
+            <p id="para1">Never use an insecure password again.</p>
+            <div class="checkbox">
+                <input id="number" type="checkbox" value="number">&nbsp include numbers</input>
+                <br>
+                <input id="symbol" type="checkbox" value="symbol">&nbsp include symbols</input>
+            </div>
+            <button onclick="generatePasswords()">Generate Passwords</button>
+            
+            <div id="line"></div>
+            <div class="password">
+                <div id="password1" onclick="copyDivToClipboard('password1');"></div>
+                <div id="password2" onclick="copyDivToClipboard('password2');""></div>
+            </div>
+        </div>
+       <script src="index.js"></script>
+    </body>
+
+</html>
